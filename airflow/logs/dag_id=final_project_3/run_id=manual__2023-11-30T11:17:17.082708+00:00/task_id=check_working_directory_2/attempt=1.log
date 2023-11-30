@@ -1,0 +1,29 @@
+[2023-11-30 11:17:23,299] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: final_project_3.check_working_directory_2 manual__2023-11-30T11:17:17.082708+00:00 [queued]>
+[2023-11-30 11:17:23,324] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: final_project_3.check_working_directory_2 manual__2023-11-30T11:17:17.082708+00:00 [queued]>
+[2023-11-30 11:17:23,325] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-30 11:17:23,325] {taskinstance.py:1357} INFO - Starting attempt 1 of 4
+[2023-11-30 11:17:23,326] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-30 11:17:23,360] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): check_working_directory_2> on 2023-11-30 11:17:17.082708+00:00
+[2023-11-30 11:17:23,372] {standard_task_runner.py:52} INFO - Started process 4976 to run task
+[2023-11-30 11:17:23,379] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'final_project_3', 'check_working_directory_2', 'manual__2023-11-30T11:17:17.082708+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/dag_final.py', '--cfg-path', '/tmp/tmp4a15kh1r', '--error-file', '/tmp/tmpoit_3xp5']
+[2023-11-30 11:17:23,381] {standard_task_runner.py:80} INFO - Job 43: Subtask check_working_directory_2
+[2023-11-30 11:17:23,690] {task_command.py:369} INFO - Running <TaskInstance: final_project_3.check_working_directory_2 manual__2023-11-30T11:17:17.082708+00:00 [running]> on host 8e6e0b239644
+[2023-11-30 11:17:24,041] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sebastiancahyoardhiiswara@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=final_project_3
+AIRFLOW_CTX_TASK_ID=check_working_directory_2
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-30T11:17:17.082708+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-30T11:17:17.082708+00:00
+[2023-11-30 11:17:24,046] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-11-30 11:17:24,048] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'echo ls']
+[2023-11-30 11:17:24,092] {subprocess.py:85} INFO - Output:
+[2023-11-30 11:17:24,097] {subprocess.py:92} INFO - ls
+[2023-11-30 11:17:24,098] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-11-30 11:17:24,170] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=final_project_3, task_id=check_working_directory_2, execution_date=20231130T111717, start_date=20231130T111723, end_date=20231130T111724
+[2023-11-30 11:17:24,228] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-11-30 11:17:24,299] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,31 @@
+[2023-11-30 11:01:43,513] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: final_project_2.json_to_dataframe manual__2023-11-30T10:56:35.395162+00:00 [queued]>
+[2023-11-30 11:01:43,564] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: final_project_2.json_to_dataframe manual__2023-11-30T10:56:35.395162+00:00 [queued]>
+[2023-11-30 11:01:43,564] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-30 11:01:43,564] {taskinstance.py:1357} INFO - Starting attempt 2 of 4
+[2023-11-30 11:01:43,565] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-30 11:01:43,647] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): json_to_dataframe> on 2023-11-30 10:56:35.395162+00:00
+[2023-11-30 11:01:43,825] {standard_task_runner.py:52} INFO - Started process 4225 to run task
+[2023-11-30 11:01:43,830] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'final_project_2', 'json_to_dataframe', 'manual__2023-11-30T10:56:35.395162+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/dag_2.py', '--cfg-path', '/tmp/tmp6cgl0p0_', '--error-file', '/tmp/tmp0sdozmfz']
+[2023-11-30 11:01:43,835] {standard_task_runner.py:80} INFO - Job 32: Subtask json_to_dataframe
+[2023-11-30 11:01:44,240] {task_command.py:369} INFO - Running <TaskInstance: final_project_2.json_to_dataframe manual__2023-11-30T10:56:35.395162+00:00 [running]> on host 8e6e0b239644
+[2023-11-30 11:01:45,524] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sebastiancahyoardhiiswara@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=final_project_2
+AIRFLOW_CTX_TASK_ID=json_to_dataframe
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-30T10:56:35.395162+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-30T10:56:35.395162+00:00
+[2023-11-30 11:01:45,617] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: json_to_df() missing 1 required positional argument: 'json'
+[2023-11-30 11:01:45,817] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=final_project_2, task_id=json_to_dataframe, execution_date=20231130T105635, start_date=20231130T110143, end_date=20231130T110145
+[2023-11-30 11:01:45,886] {standard_task_runner.py:97} ERROR - Failed to execute job 32 for task json_to_dataframe (json_to_df() missing 1 required positional argument: 'json'; 4225)
+[2023-11-30 11:01:45,920] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-11-30 11:01:46,031] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

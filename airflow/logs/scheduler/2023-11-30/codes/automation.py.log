@@ -1,0 +1,398 @@
+[2023-11-30 04:31:17,248] {processor.py:153} INFO - Started process (PID=1651) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:31:17,250] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:31:17,251] {logging_mixin.py:115} INFO - [2023-11-30 04:31:17,251] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:31:17,262] {logging_mixin.py:115} INFO - [2023-11-30 04:31:17,260] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:31:17,262] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:31:17,300] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.067 seconds
+[2023-11-30 04:31:48,145] {processor.py:153} INFO - Started process (PID=1673) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:31:48,146] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:31:48,147] {logging_mixin.py:115} INFO - [2023-11-30 04:31:48,147] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:31:48,155] {logging_mixin.py:115} INFO - [2023-11-30 04:31:48,152] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:31:48,156] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:31:48,187] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.047 seconds
+[2023-11-30 04:32:18,367] {processor.py:153} INFO - Started process (PID=1695) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:32:18,369] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:32:18,371] {logging_mixin.py:115} INFO - [2023-11-30 04:32:18,371] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:32:18,377] {logging_mixin.py:115} INFO - [2023-11-30 04:32:18,375] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:32:18,378] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:32:18,408] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.046 seconds
+[2023-11-30 04:32:48,918] {processor.py:153} INFO - Started process (PID=1717) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:32:48,919] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:32:48,921] {logging_mixin.py:115} INFO - [2023-11-30 04:32:48,920] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:32:48,932] {logging_mixin.py:115} INFO - [2023-11-30 04:32:48,930] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:32:48,933] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:32:48,982] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.072 seconds
+[2023-11-30 04:33:19,214] {processor.py:153} INFO - Started process (PID=1739) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:33:19,218] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:33:19,221] {logging_mixin.py:115} INFO - [2023-11-30 04:33:19,221] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:33:19,232] {logging_mixin.py:115} INFO - [2023-11-30 04:33:19,230] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:33:19,233] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:33:19,282] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.076 seconds
+[2023-11-30 04:33:49,502] {processor.py:153} INFO - Started process (PID=1761) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:33:49,503] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:33:49,534] {logging_mixin.py:115} INFO - [2023-11-30 04:33:49,533] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:33:49,553] {logging_mixin.py:115} INFO - [2023-11-30 04:33:49,549] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:33:49,570] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:33:49,689] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.205 seconds
+[2023-11-30 04:34:20,036] {processor.py:153} INFO - Started process (PID=1783) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:34:20,037] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:34:20,038] {logging_mixin.py:115} INFO - [2023-11-30 04:34:20,038] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:34:20,044] {logging_mixin.py:115} INFO - [2023-11-30 04:34:20,042] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:34:20,045] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:34:20,076] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.045 seconds
+[2023-11-30 04:34:50,396] {processor.py:153} INFO - Started process (PID=1805) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:34:50,398] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:34:50,402] {logging_mixin.py:115} INFO - [2023-11-30 04:34:50,402] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:34:50,465] {logging_mixin.py:115} INFO - [2023-11-30 04:34:50,459] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:34:50,466] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:34:50,538] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.151 seconds
+[2023-11-30 04:35:20,942] {processor.py:153} INFO - Started process (PID=1827) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:35:20,943] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:35:20,944] {logging_mixin.py:115} INFO - [2023-11-30 04:35:20,944] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:35:20,951] {logging_mixin.py:115} INFO - [2023-11-30 04:35:20,949] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:35:20,952] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:35:20,994] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.057 seconds
+[2023-11-30 04:35:51,083] {processor.py:153} INFO - Started process (PID=1849) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:35:51,084] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:35:51,085] {logging_mixin.py:115} INFO - [2023-11-30 04:35:51,085] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:35:51,094] {logging_mixin.py:115} INFO - [2023-11-30 04:35:51,091] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:35:51,095] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:35:51,154] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.082 seconds
+[2023-11-30 04:36:21,357] {processor.py:153} INFO - Started process (PID=1877) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:36:21,358] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:36:21,359] {logging_mixin.py:115} INFO - [2023-11-30 04:36:21,359] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:36:21,365] {logging_mixin.py:115} INFO - [2023-11-30 04:36:21,364] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:36:21,366] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:36:21,400] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.049 seconds
+[2023-11-30 04:36:51,728] {processor.py:153} INFO - Started process (PID=1905) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:36:51,730] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:36:51,731] {logging_mixin.py:115} INFO - [2023-11-30 04:36:51,731] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:36:51,738] {logging_mixin.py:115} INFO - [2023-11-30 04:36:51,736] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:36:51,739] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:36:51,781] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.058 seconds
+[2023-11-30 04:37:22,279] {processor.py:153} INFO - Started process (PID=1933) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:37:22,280] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:37:22,281] {logging_mixin.py:115} INFO - [2023-11-30 04:37:22,281] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:37:22,288] {logging_mixin.py:115} INFO - [2023-11-30 04:37:22,286] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:37:22,289] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:37:22,340] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.067 seconds
+[2023-11-30 04:37:52,851] {processor.py:153} INFO - Started process (PID=1967) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:37:52,852] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:37:52,853] {logging_mixin.py:115} INFO - [2023-11-30 04:37:52,853] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:37:52,863] {logging_mixin.py:115} INFO - [2023-11-30 04:37:52,860] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:37:52,864] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:37:52,915] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.070 seconds
+[2023-11-30 04:38:23,031] {processor.py:153} INFO - Started process (PID=1995) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:38:23,032] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:38:23,035] {logging_mixin.py:115} INFO - [2023-11-30 04:38:23,035] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:38:23,042] {logging_mixin.py:115} INFO - [2023-11-30 04:38:23,040] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:38:23,043] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:38:23,084] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.058 seconds
+[2023-11-30 04:38:53,976] {processor.py:153} INFO - Started process (PID=2031) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:38:53,977] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:38:53,978] {logging_mixin.py:115} INFO - [2023-11-30 04:38:53,978] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:38:53,984] {logging_mixin.py:115} INFO - [2023-11-30 04:38:53,983] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:38:53,985] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:38:54,023] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.052 seconds
+[2023-11-30 04:39:24,250] {processor.py:153} INFO - Started process (PID=2059) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:39:24,251] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:39:24,253] {logging_mixin.py:115} INFO - [2023-11-30 04:39:24,252] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:39:24,262] {logging_mixin.py:115} INFO - [2023-11-30 04:39:24,260] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:39:24,263] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:39:24,310] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.068 seconds
+[2023-11-30 04:39:54,885] {processor.py:153} INFO - Started process (PID=2085) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:39:54,886] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:39:54,887] {logging_mixin.py:115} INFO - [2023-11-30 04:39:54,886] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:39:54,902] {logging_mixin.py:115} INFO - [2023-11-30 04:39:54,892] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:39:54,903] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:39:55,214] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.339 seconds
+[2023-11-30 04:40:25,347] {processor.py:153} INFO - Started process (PID=2112) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:40:25,348] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:40:25,353] {logging_mixin.py:115} INFO - [2023-11-30 04:40:25,353] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:40:25,364] {logging_mixin.py:115} INFO - [2023-11-30 04:40:25,362] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:40:25,366] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:40:25,475] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.136 seconds
+[2023-11-30 04:40:56,205] {processor.py:153} INFO - Started process (PID=2137) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:40:56,206] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:40:56,206] {logging_mixin.py:115} INFO - [2023-11-30 04:40:56,206] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:40:56,214] {logging_mixin.py:115} INFO - [2023-11-30 04:40:56,212] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:40:56,215] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:40:56,246] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.047 seconds
+[2023-11-30 04:41:26,412] {processor.py:153} INFO - Started process (PID=2163) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:41:26,413] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:41:26,414] {logging_mixin.py:115} INFO - [2023-11-30 04:41:26,414] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:41:26,423] {logging_mixin.py:115} INFO - [2023-11-30 04:41:26,421] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:41:26,424] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:41:26,463] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.057 seconds
+[2023-11-30 04:41:56,652] {processor.py:153} INFO - Started process (PID=2182) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:41:56,655] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:41:56,656] {logging_mixin.py:115} INFO - [2023-11-30 04:41:56,656] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:41:56,667] {logging_mixin.py:115} INFO - [2023-11-30 04:41:56,664] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:41:56,668] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:41:56,716] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.070 seconds
+[2023-11-30 04:42:27,049] {processor.py:153} INFO - Started process (PID=2210) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:42:27,050] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:42:27,052] {logging_mixin.py:115} INFO - [2023-11-30 04:42:27,051] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:42:27,061] {logging_mixin.py:115} INFO - [2023-11-30 04:42:27,058] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:42:27,062] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:42:27,107] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.065 seconds
+[2023-11-30 04:42:57,563] {processor.py:153} INFO - Started process (PID=2238) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:42:57,566] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:42:57,568] {logging_mixin.py:115} INFO - [2023-11-30 04:42:57,568] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:42:57,584] {logging_mixin.py:115} INFO - [2023-11-30 04:42:57,581] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:42:57,585] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:42:57,709] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.165 seconds
+[2023-11-30 04:43:14,634] {processor.py:153} INFO - Started process (PID=2266) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:43:14,636] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:43:14,638] {logging_mixin.py:115} INFO - [2023-11-30 04:43:14,637] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:43:14,641] {logging_mixin.py:115} INFO - [2023-11-30 04:43:14,641] {dagbag.py:300} INFO - File /opt/airflow/dags/codes/automation.py assumed to contain no DAGs. Skipping.
+[2023-11-30 04:43:14,641] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:43:14,681] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.060 seconds
+[2023-11-30 04:43:44,813] {processor.py:153} INFO - Started process (PID=2294) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:43:44,815] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:43:44,816] {logging_mixin.py:115} INFO - [2023-11-30 04:43:44,816] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:43:44,819] {logging_mixin.py:115} INFO - [2023-11-30 04:43:44,819] {dagbag.py:300} INFO - File /opt/airflow/dags/codes/automation.py assumed to contain no DAGs. Skipping.
+[2023-11-30 04:43:44,820] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:43:44,852] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.046 seconds
+[2023-11-30 04:43:50,866] {processor.py:153} INFO - Started process (PID=2299) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:43:50,867] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:43:50,869] {logging_mixin.py:115} INFO - [2023-11-30 04:43:50,869] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:43:50,880] {logging_mixin.py:115} INFO - [2023-11-30 04:43:50,878] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/codes/automation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/codes/automation.py", line 1, in <module>
+    from airflow.dags.codes.code import *
+ModuleNotFoundError: No module named 'airflow.dags'
+[2023-11-30 04:43:50,881] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:43:50,973] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.113 seconds
+[2023-11-30 04:44:09,804] {processor.py:153} INFO - Started process (PID=2327) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:44:09,805] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:44:09,807] {logging_mixin.py:115} INFO - [2023-11-30 04:44:09,807] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:44:09,813] {logging_mixin.py:115} INFO - [2023-11-30 04:44:09,813] {dagbag.py:300} INFO - File /opt/airflow/dags/codes/automation.py assumed to contain no DAGs. Skipping.
+[2023-11-30 04:44:09,814] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:44:09,887] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.092 seconds
+[2023-11-30 04:44:28,901] {processor.py:153} INFO - Started process (PID=2332) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:44:28,903] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:44:28,906] {logging_mixin.py:115} INFO - [2023-11-30 04:44:28,906] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:44:28,914] {logging_mixin.py:115} INFO - [2023-11-30 04:44:28,914] {dagbag.py:300} INFO - File /opt/airflow/dags/codes/automation.py assumed to contain no DAGs. Skipping.
+[2023-11-30 04:44:28,915] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:44:28,952] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.058 seconds
+[2023-11-30 04:44:59,316] {processor.py:153} INFO - Started process (PID=2360) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:44:59,317] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:44:59,318] {logging_mixin.py:115} INFO - [2023-11-30 04:44:59,318] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:44:59,321] {logging_mixin.py:115} INFO - [2023-11-30 04:44:59,320] {dagbag.py:300} INFO - File /opt/airflow/dags/codes/automation.py assumed to contain no DAGs. Skipping.
+[2023-11-30 04:44:59,321] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:44:59,343] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.031 seconds
+[2023-11-30 04:45:29,386] {processor.py:153} INFO - Started process (PID=2388) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:45:29,388] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:45:29,389] {logging_mixin.py:115} INFO - [2023-11-30 04:45:29,389] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:45:29,391] {logging_mixin.py:115} INFO - [2023-11-30 04:45:29,391] {dagbag.py:300} INFO - File /opt/airflow/dags/codes/automation.py assumed to contain no DAGs. Skipping.
+[2023-11-30 04:45:29,391] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:45:29,418] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.037 seconds
+[2023-11-30 04:45:59,579] {processor.py:153} INFO - Started process (PID=2416) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:45:59,580] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:45:59,581] {logging_mixin.py:115} INFO - [2023-11-30 04:45:59,581] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:45:59,583] {logging_mixin.py:115} INFO - [2023-11-30 04:45:59,583] {dagbag.py:300} INFO - File /opt/airflow/dags/codes/automation.py assumed to contain no DAGs. Skipping.
+[2023-11-30 04:45:59,584] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:45:59,605] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.031 seconds
+[2023-11-30 04:46:13,534] {processor.py:153} INFO - Started process (PID=2438) to work on /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:46:13,539] {processor.py:641} INFO - Processing file /opt/airflow/dags/codes/automation.py for tasks to queue
+[2023-11-30 04:46:13,541] {logging_mixin.py:115} INFO - [2023-11-30 04:46:13,541] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:46:13,548] {logging_mixin.py:115} INFO - [2023-11-30 04:46:13,548] {dagbag.py:300} INFO - File /opt/airflow/dags/codes/automation.py assumed to contain no DAGs. Skipping.
+[2023-11-30 04:46:13,549] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/codes/automation.py
+[2023-11-30 04:46:13,578] {processor.py:161} INFO - Processing /opt/airflow/dags/codes/automation.py took 0.054 seconds

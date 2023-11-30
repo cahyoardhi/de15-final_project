@@ -1,0 +1,103 @@
+[2023-11-30 10:52:31,651] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: final_project_3.running_automation_2 manual__2023-11-30T04:51:41.340710+00:00 [queued]>
+[2023-11-30 10:52:32,052] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: final_project_3.running_automation_2 manual__2023-11-30T04:51:41.340710+00:00 [queued]>
+[2023-11-30 10:52:32,053] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-30 10:52:32,088] {taskinstance.py:1357} INFO - Starting attempt 4 of 4
+[2023-11-30 10:52:32,112] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-30 10:52:32,373] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): running_automation_2> on 2023-11-30 04:51:41.340710+00:00
+[2023-11-30 10:52:32,394] {standard_task_runner.py:52} INFO - Started process 3808 to run task
+[2023-11-30 10:52:32,491] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'final_project_3', 'running_automation_2', 'manual__2023-11-30T04:51:41.340710+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/dag_final.py', '--cfg-path', '/tmp/tmpizja0q0c', '--error-file', '/tmp/tmpxm9rysm0']
+[2023-11-30 10:52:32,578] {standard_task_runner.py:80} INFO - Job 27: Subtask running_automation_2
+[2023-11-30 10:52:34,510] {task_command.py:369} INFO - Running <TaskInstance: final_project_3.running_automation_2 manual__2023-11-30T04:51:41.340710+00:00 [running]> on host 8e6e0b239644
+[2023-11-30 10:52:36,174] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sebastiancahyoardhiiswara@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=final_project_3
+AIRFLOW_CTX_TASK_ID=running_automation_2
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-30T04:51:41.340710+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-30T04:51:41.340710+00:00
+[2023-11-30 10:52:36,205] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-11-30 10:52:36,206] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python automation.py']
+[2023-11-30 10:52:36,265] {subprocess.py:85} INFO - Output:
+[2023-11-30 10:52:36,478] {subprocess.py:92} INFO - python: can't open file 'automation.py': [Errno 2] No such file or directory
+[2023-11-30 10:52:36,484] {subprocess.py:96} INFO - Command exited with return code 2
+[2023-11-30 10:52:36,680] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2023-11-30 10:52:36,810] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=final_project_3, task_id=running_automation_2, execution_date=20231130T045141, start_date=20231130T105231, end_date=20231130T105236
+[2023-11-30 10:52:37,280] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/email.py:115 PendingDeprecationWarning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2023-11-30 10:52:37,287] {configuration.py:494} WARNING - section/key [smtp/smtp_user] not found in config
+[2023-11-30 10:52:37,299] {email.py:224} INFO - Email alerting: attempt 1
+[2023-11-30 10:52:37,338] {configuration.py:494} WARNING - section/key [smtp/smtp_user] not found in config
+[2023-11-30 10:52:37,339] {email.py:224} INFO - Email alerting: attempt 1
+[2023-11-30 10:52:37,340] {taskinstance.py:1944} ERROR - Failed to send email to: ['sebastiancahyoardhiiswara@gmail.com']
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1451, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1598, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1659, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2316, in email_alert
+    send_email(task.email, subject, html_content)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 71, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 115, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 226, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 260, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.7/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.7/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.7/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/usr/local/lib/python3.7/socket.py", line 728, in create_connection
+    raise err
+  File "/usr/local/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1942, in handle_failure
+    self.email_alert(error, task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2318, in email_alert
+    send_email(task.email, subject, html_content_err)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 71, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 115, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 226, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 260, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.7/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.7/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.7/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/usr/local/lib/python3.7/socket.py", line 728, in create_connection
+    raise err
+  File "/usr/local/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+[2023-11-30 10:52:37,601] {standard_task_runner.py:97} ERROR - Failed to execute job 27 for task running_automation_2 (Bash command failed. The command returned a non-zero exit code 2.; 3808)
+[2023-11-30 10:52:37,763] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-11-30 10:52:37,970] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
