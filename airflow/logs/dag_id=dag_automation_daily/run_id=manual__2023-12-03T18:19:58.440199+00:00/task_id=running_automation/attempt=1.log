@@ -1,0 +1,98 @@
+[2023-12-03 18:20:00,793] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_automation_daily.running_automation manual__2023-12-03T18:19:58.440199+00:00 [queued]>
+[2023-12-03 18:20:00,816] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_automation_daily.running_automation manual__2023-12-03T18:19:58.440199+00:00 [queued]>
+[2023-12-03 18:20:00,817] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-03 18:20:00,821] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-12-03 18:20:00,821] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-03 18:20:00,863] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): running_automation> on 2023-12-03 18:19:58.440199+00:00
+[2023-12-03 18:20:00,885] {standard_task_runner.py:52} INFO - Started process 573 to run task
+[2023-12-03 18:20:00,896] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_automation_daily', 'running_automation', 'manual__2023-12-03T18:19:58.440199+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp2nbesvow', '--error-file', '/tmp/tmptppct07m']
+[2023-12-03 18:20:00,897] {standard_task_runner.py:80} INFO - Job 43: Subtask running_automation
+[2023-12-03 18:20:01,201] {task_command.py:369} INFO - Running <TaskInstance: dag_automation_daily.running_automation manual__2023-12-03T18:19:58.440199+00:00 [running]> on host c9140d11a0a8
+[2023-12-03 18:20:01,464] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sebastiancahyoardhiiswara@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_automation_daily
+AIRFLOW_CTX_TASK_ID=running_automation
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-03T18:19:58.440199+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-03T18:19:58.440199+00:00
+[2023-12-03 18:20:01,469] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-12-03 18:20:01,470] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python codes/automation.py']
+[2023-12-03 18:20:01,484] {subprocess.py:85} INFO - Output:
+[2023-12-03 18:20:03,907] {subprocess.py:92} INFO - Traceback (most recent call last):
+[2023-12-03 18:20:03,907] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1706, in _execute_context
+[2023-12-03 18:20:03,907] {subprocess.py:92} INFO -     cursor, statement, parameters, context
+[2023-12-03 18:20:03,908] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 716, in do_execute
+[2023-12-03 18:20:03,908] {subprocess.py:92} INFO -     cursor.execute(statement, parameters)
+[2023-12-03 18:20:03,908] {subprocess.py:92} INFO - psycopg2.errors.DependentObjectsStillExist: cannot drop table dim_province because other objects depend on it
+[2023-12-03 18:20:03,909] {subprocess.py:92} INFO - DETAIL:  constraint dim_district_province_id_fkey on table dim_district depends on table dim_province
+[2023-12-03 18:20:03,909] {subprocess.py:92} INFO - constraint fact_province_daily_province_id_fkey on table fact_province_daily depends on table dim_province
+[2023-12-03 18:20:03,910] {subprocess.py:92} INFO - HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+[2023-12-03 18:20:03,910] {subprocess.py:92} INFO - 
+[2023-12-03 18:20:03,910] {subprocess.py:92} INFO - 
+[2023-12-03 18:20:03,910] {subprocess.py:92} INFO - The above exception was the direct cause of the following exception:
+[2023-12-03 18:20:03,911] {subprocess.py:92} INFO - 
+[2023-12-03 18:20:03,911] {subprocess.py:92} INFO - Traceback (most recent call last):
+[2023-12-03 18:20:03,911] {subprocess.py:92} INFO -   File "codes/automation.py", line 16, in <module>
+[2023-12-03 18:20:03,912] {subprocess.py:92} INFO -     update_dim_province_table(df, credentials_db_postgres, dim_province)
+[2023-12-03 18:20:03,912] {subprocess.py:92} INFO -   File "/opt/***/dags/codes/code.py", line 157, in update_dim_province_table
+[2023-12-03 18:20:03,912] {subprocess.py:92} INFO -     df_temp.to_sql(name=schema.name, con=credentials, index=False, if_exists='replace')
+[2023-12-03 18:20:03,913] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+[2023-12-03 18:20:03,913] {subprocess.py:92} INFO -     method=method,
+[2023-12-03 18:20:03,913] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+[2023-12-03 18:20:03,913] {subprocess.py:92} INFO -     **engine_kwargs,
+[2023-12-03 18:20:03,914] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1758, in to_sql
+[2023-12-03 18:20:03,914] {subprocess.py:92} INFO -     dtype=dtype,
+[2023-12-03 18:20:03,914] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1650, in prep_table
+[2023-12-03 18:20:03,915] {subprocess.py:92} INFO -     table.create()
+[2023-12-03 18:20:03,915] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 860, in create
+[2023-12-03 18:20:03,915] {subprocess.py:92} INFO -     self.pd_sql.drop_table(self.name, self.schema)
+[2023-12-03 18:20:03,915] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1810, in drop_table
+[2023-12-03 18:20:03,916] {subprocess.py:92} INFO -     self.get_table(table_name, schema).drop()
+[2023-12-03 18:20:03,916] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/sql/schema.py", line 960, in drop
+[2023-12-03 18:20:03,917] {subprocess.py:92} INFO -     bind._run_ddl_visitor(ddl.SchemaDropper, self, checkfirst=checkfirst)
+[2023-12-03 18:20:03,917] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3008, in _run_ddl_visitor
+[2023-12-03 18:20:03,918] {subprocess.py:92} INFO -     conn._run_ddl_visitor(visitorcallable, element, **kwargs)
+[2023-12-03 18:20:03,918] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2016, in _run_ddl_visitor
+[2023-12-03 18:20:03,919] {subprocess.py:92} INFO -     visitorcallable(self.dialect, self, **kwargs).traverse_single(element)
+[2023-12-03 18:20:03,919] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/sql/visitors.py", line 483, in traverse_single
+[2023-12-03 18:20:03,919] {subprocess.py:92} INFO -     return meth(obj, **kw)
+[2023-12-03 18:20:03,920] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/sql/ddl.py", line 1097, in visit_table
+[2023-12-03 18:20:03,920] {subprocess.py:92} INFO -     self.connection.execute(DropTable(table))
+[2023-12-03 18:20:03,920] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1200, in execute
+[2023-12-03 18:20:03,921] {subprocess.py:92} INFO -     return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+[2023-12-03 18:20:03,921] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/sql/ddl.py", line 78, in _execute_on_connection
+[2023-12-03 18:20:03,921] {subprocess.py:92} INFO -     self, multiparams, params, execution_options
+[2023-12-03 18:20:03,922] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1296, in _execute_ddl
+[2023-12-03 18:20:03,922] {subprocess.py:92} INFO -     compiled,
+[2023-12-03 18:20:03,922] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1749, in _execute_context
+[2023-12-03 18:20:03,923] {subprocess.py:92} INFO -     e, statement, parameters, cursor, context
+[2023-12-03 18:20:03,923] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1930, in _handle_dbapi_exception
+[2023-12-03 18:20:03,923] {subprocess.py:92} INFO -     sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+[2023-12-03 18:20:03,924] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2023-12-03 18:20:03,924] {subprocess.py:92} INFO -     raise exception
+[2023-12-03 18:20:03,925] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1706, in _execute_context
+[2023-12-03 18:20:03,925] {subprocess.py:92} INFO -     cursor, statement, parameters, context
+[2023-12-03 18:20:03,926] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 716, in do_execute
+[2023-12-03 18:20:03,926] {subprocess.py:92} INFO -     cursor.execute(statement, parameters)
+[2023-12-03 18:20:03,926] {subprocess.py:92} INFO - sqlalchemy.exc.InternalError: (psycopg2.errors.DependentObjectsStillExist) cannot drop table dim_province because other objects depend on it
+[2023-12-03 18:20:03,927] {subprocess.py:92} INFO - DETAIL:  constraint dim_district_province_id_fkey on table dim_district depends on table dim_province
+[2023-12-03 18:20:03,927] {subprocess.py:92} INFO - constraint fact_province_daily_province_id_fkey on table fact_province_daily depends on table dim_province
+[2023-12-03 18:20:03,927] {subprocess.py:92} INFO - HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+[2023-12-03 18:20:03,928] {subprocess.py:92} INFO - 
+[2023-12-03 18:20:03,928] {subprocess.py:92} INFO - [SQL:
+[2023-12-03 18:20:03,928] {subprocess.py:92} INFO - DROP TABLE dim_province]
+[2023-12-03 18:20:03,928] {subprocess.py:92} INFO - (Background on this error at: http://sqlalche.me/e/14/2j85)
+[2023-12-03 18:20:04,052] {subprocess.py:96} INFO - Command exited with return code 1
+[2023-12-03 18:20:04,074] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-12-03 18:20:04,079] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_automation_daily, task_id=running_automation, execution_date=20231203T181958, start_date=20231203T182000, end_date=20231203T182004
+[2023-12-03 18:20:04,097] {standard_task_runner.py:97} ERROR - Failed to execute job 43 for task running_automation (Bash command failed. The command returned a non-zero exit code 1.; 573)
+[2023-12-03 18:20:04,134] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-12-03 18:20:04,190] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

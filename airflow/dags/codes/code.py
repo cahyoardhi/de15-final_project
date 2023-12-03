@@ -1,6 +1,9 @@
 import requests
 import pandas as pd
 import json
+import os
+
+# from dotenv import load_dotenv
 from sqlalchemy import (
     create_engine,
     MetaData,
@@ -14,23 +17,9 @@ from sqlalchemy import (
     insert,
 )
 
-credentials_db_postgres = {
-    "database": "dwh",
-    "user": "postgres",
-    "password": "postgres",
-    "port": "5435",
-    "host": "0.0.0.0",
-}
-
-credentials_db_mysql = {
-    "database": "mysql",
-    "user": "root",
-    "password": "mysql",
-    "root_password": "mysql",
-    "port": "3307",
-    "host": "0.0.0.0",
-    "table_name": "mysql",
-}
+credentials_db_mysql = os.environ.get("MYSQL_CONN_STRING")
+# credentials_db_postgres = os.environ.get("PS_CONN_STRING")
+credentials_db_postgres = "postgresql://postgres:postgres@db_postgres_dwh:5432/dwh"
 
 
 def request_data_to_api():
@@ -56,28 +45,22 @@ def json_to_df(json):
 
 
 def input_df_into_db_staging_area(df, credentials):
-    engine = create_engine(
-        f'mysql+mysqldb://{credentials["user"]}:{credentials["password"]}@{credentials["host"]}:{credentials["port"]}/{credentials["database"]}'
-    )
-    table_name = credentials["table_name"]
+    engine = create_engine(credentials)
+    table_name = "mysql"
     df.to_sql(table_name, engine, schema=None, if_exists="replace", index=False)
     engine.dispose()
 
 
 def read_db_staging_area(credentials):
-    engine = create_engine(
-        f'mysql+mysqldb://{credentials["user"]}:{credentials["password"]}@{credentials["host"]}:{credentials["port"]}/{credentials["database"]}'
-    )
-    table_name = credentials["table_name"]
+    engine = create_engine(credentials)
+    table_name = "mysql"
     df = pd.read_sql(table_name, engine)
     engine.dispose()
     return df
 
 
 def generate_schema_dwh(credentials):
-    engine = create_engine(
-        f'postgresql://{credentials["user"]}:{credentials["password"]}@{credentials["host"]}:{credentials["port"]}/{credentials["database"]}'
-    )
+    engine = create_engine(credentials)
     metadata_obj = MetaData()
     dim_province = Table(
         "dim_province",
@@ -164,9 +147,7 @@ def transform_raw_data(df):
 
 
 def update_dim_province_table(df, credentials, schema):
-    engine = create_engine(
-        f'postgresql://{credentials["user"]}:{credentials["password"]}@{credentials["host"]}:{credentials["port"]}/{credentials["database"]}'
-    )
+    engine = create_engine(credentials)
 
     df_temp = pd.DataFrame()
     province_unique = df["province_id"].unique()
@@ -175,21 +156,17 @@ def update_dim_province_table(df, credentials, schema):
         df_temp.loc[i, "province_name"] = province_data["province_name"]
         df_temp.loc[i, "province_id"] = province_data["province_id"]
 
-    with engine.connect() as conn:
-        try:
-            conn.execute(insert(schema), df_temp.to_dict("records"))
-        except Exception as e:
-            print(e)
-            pass
-        finally:
-            conn.commit()
-            engine.dispose()
+    try:
+        df_temp.to_sql(
+            name=schema.name, con=credentials, index=False, if_exists="replace"
+        )
+    except Exception as e:
+        print(e)
+        pass
 
 
 def update_dim_district_table(df, credentials, schema):
-    engine = create_engine(
-        f'postgresql://{credentials["user"]}:{credentials["password"]}@{credentials["host"]}:{credentials["port"]}/{credentials["database"]}'
-    )
+    engine = create_engine(credentials)
 
     df_temp = pd.DataFrame()
     district_unique = df["district_id"].unique()
@@ -199,21 +176,17 @@ def update_dim_district_table(df, credentials, schema):
         df_temp.loc[i, "district_name"] = district_data["district_name"]
         df_temp.loc[i, "province_id"] = district_data["province_id"]
 
-    with engine.connect() as conn:
-        try:
-            conn.execute(insert(schema), df_temp.to_dict("records"))
-        except Exception as e:
-            print(e)
-            pass
-        finally:
-            conn.commit()
-            engine.dispose()
+    try:
+        df_temp.to_sql(
+            name=schema.name, con=credentials, index=False, if_exists="replace"
+        )
+    except Exception as e:
+        print(e)
+        pass
 
 
 def update_dim_case_table(df, credentials, schema):
-    engine = create_engine(
-        f'postgresql://{credentials["user"]}:{credentials["password"]}@{credentials["host"]}:{credentials["port"]}/{credentials["database"]}'
-    )
+    engine = create_engine(credentials)
 
     df_case = pd.DataFrame(
         columns=["status_detail"], data=sorted(df["status_detail"].unique())
@@ -221,38 +194,29 @@ def update_dim_case_table(df, credentials, schema):
     df_case["status_name"] = df_case["status_detail"].apply(lambda x: x.split("_")[0])
     df_case["id"] = df_case.index
 
-    with engine.connect() as conn:
-        try:
-            conn.execute(insert(schema), df_case.to_dict("records"))
-        except Exception as e:
-            print(e)
-            pass
-        finally:
-            conn.commit()
-            engine.dispose()
-
-    return df_case
+    try:
+        df_case.to_sql(
+            name=schema.name, con=credentials, index=False, if_exists="replace"
+        )
+    except Exception as e:
+        print(e)
+        pass
+    finally:
+        return df_case
 
 
 def update_fact_district_daily_table(df, df_case, credentials, schema):
-    engine = create_engine(
-        f'postgresql://{credentials["user"]}:{credentials["password"]}@{credentials["host"]}:{credentials["port"]}/{credentials["database"]}'
-    )
+    engine = create_engine(credentials)
 
     df_temp = df.merge(df_case, on=["status_detail", "status_name"], how="left")
     df_temp = df_temp.rename(columns={"id": "case_id"})
     df_temp = df_temp[["district_id", "case_id", "date", "total"]]
 
-    with engine.connect() as conn:
-        conn.execute(insert(schema), df_temp.to_dict("records"))
-        conn.commit()
-        engine.dispose()
+    df_temp.to_sql(name=schema.name, con=credentials, index=False, if_exists="replace")
 
 
 def update_fact_province_daily_table(df, df_case, credentials, schema):
-    engine = create_engine(
-        f'postgresql://{credentials["user"]}:{credentials["password"]}@{credentials["host"]}:{credentials["port"]}/{credentials["database"]}'
-    )
+    engine = create_engine(credentials)
 
     df_temp = df.merge(df_case, on=["status_detail", "status_name"], how="left")
     df_temp = df_temp.rename(columns={"id": "case_id"})
@@ -265,23 +229,4 @@ def update_fact_province_daily_table(df, df_case, credentials, schema):
         as_index=False,
     ).agg({"total": "sum"})
 
-    with engine.connect() as conn:
-        conn.execute(insert(schema), df_temp.to_dict("records"))
-        conn.commit()
-        engine.dispose()
-
-def extract(credentials):
-    response = request_data_to_api()
-    df = json_to_df(response)
-    input_df_into_db_staging_area(df, credentials)
-
-def transform(credentials):
-    df = read_db_staging_area(credentials)
-    df = transform_raw_data(df)
-
-def load(df, credentials, dim_province, dim_district, dim_case, fact_district_daily, fact_province_daily):
-    update_dim_province_table(df, credentials, dim_province)
-    update_dim_district_table(df, credentials_db_postgres, dim_district)
-    df_case = update_dim_case_table(df, credentials_db_postgres, dim_case)
-    update_fact_district_daily_table(df, df_case, credentials_db_postgres, fact_district_daily)
-    update_fact_province_daily_table(df, df_case, credentials_db_postgres, fact_province_daily)
+    df_temp.to_sql(name=schema.name, con=credentials, index=False, if_exists="replace")

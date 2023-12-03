@@ -1,16 +1,16 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-from airflow.operators.python import PythonOperator
+from airflow.operators.bash import BashOperator
 from codes.code import *
 
 with DAG(
-    "final_project",
+    "dag_automation_daily",
     default_args={
         "depends_on_past": False,
         "email": ["sebastiancahyoardhiiswara@gmail.com"],
         "email_on_failure": True,
         "email_on_retry": False,
-        "retries": 3,
+        "retries": 1,
         "retry_delay": timedelta(minutes=5),
         # 'queue': 'bash_queue',
         # 'pool': 'backfill',
@@ -25,29 +25,17 @@ with DAG(
         # 'sla_miss_callback': yet_another_function,
         # 'trigger_rule': 'all_success'
     },
-    description="Final project for digital skola DE bootcamp 2023",
+    description="Final project for digitalskola DE bootcamp 2023",
     schedule_interval="@daily",
-    start_date=datetime(2023, 11, 27),
+    start_date=datetime(2023, 11, 30),
     catchup=False,
     tags=["daily scheduler"],
 ) as dag:
-    # t1 = PythonOperator(
-    #     task_id="get data from api",
-    #     python_callable=extract(credentials_db_mysql),
-    #     dag=dag,
-    # )
-    t2 = PythonOperator(
-        task_id="generate schema dwh",
-        python_callable=generate_schema_dwh(credentials_db_postgres),
-        dag=dag,
-    )
-    t3 = PythonOperator(
-        task_id="transformm",
-        python_callable=transform(credentials_db_postgres),
-        dag=dag,
-    )
+    task = BashOperator(
+        task_id="running_automation",
+        bash_command="python codes/automation.py",
+        cwd=dag.folder,
+        dag=dag
+    ),
 
-# t1 >> t2
-# t1 >> t3
-
-t2 >> t3
+    task

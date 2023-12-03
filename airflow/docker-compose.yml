@@ -1,4 +1,3 @@
----
 version: '3.4'
 
 services:
@@ -13,14 +12,18 @@ services:
       retries: 5
     env_file:
       - .env
+      - ../database/.env
     volumes:
       - postgres_airflow:/var/lib/postgresql/data
+    networks:
+      - shared_network
 
   scheduler:
     image: apache/airflow:2.3.0
     user: "${AIRFLOW_UID}:0"
     env_file: 
       - .env
+      - ../database/.env
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -36,12 +39,15 @@ services:
     restart: on-failure
     ports:
       - "8793:8793"
+    networks:
+      - shared_network
 
   webserver:
     image: apache/airflow:2.3.0
     user: "${AIRFLOW_UID}:0"
     env_file: 
       - .env
+      - ../database/.env
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -57,6 +63,8 @@ services:
     command: webserver
     ports:
       - "8080:8080"
+    networks:
+      - shared_network
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 30s
@@ -68,6 +76,7 @@ services:
     user: "${AIRFLOW_UID}:0"
     env_file: 
       - .env
+      - ../database/.env
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -81,6 +90,11 @@ services:
         mkdir -p /sources/logs /sources/dags /sources/plugins
         chown -R "${AIRFLOW_UID}:0" /sources/{logs,dags,plugins}
         exec /entrypoint airflow version
+    networks:
+      - shared_network
 volumes:
   postgres_airflow:
       external: true
+networks:
+  shared_network:
+    external: true

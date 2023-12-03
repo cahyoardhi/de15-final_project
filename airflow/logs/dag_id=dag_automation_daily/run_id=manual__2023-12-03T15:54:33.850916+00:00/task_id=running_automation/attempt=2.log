@@ -1,0 +1,45 @@
+[2023-12-03 15:59:51,004] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_automation_daily.running_automation manual__2023-12-03T15:54:33.850916+00:00 [queued]>
+[2023-12-03 15:59:51,029] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_automation_daily.running_automation manual__2023-12-03T15:54:33.850916+00:00 [queued]>
+[2023-12-03 15:59:51,031] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-03 15:59:51,031] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2023-12-03 15:59:51,032] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-03 15:59:51,097] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): running_automation> on 2023-12-03 15:54:33.850916+00:00
+[2023-12-03 15:59:51,121] {standard_task_runner.py:52} INFO - Started process 381 to run task
+[2023-12-03 15:59:51,130] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_automation_daily', 'running_automation', 'manual__2023-12-03T15:54:33.850916+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpadusu8qq', '--error-file', '/tmp/tmp6f1oc2mu']
+[2023-12-03 15:59:51,132] {standard_task_runner.py:80} INFO - Job 7: Subtask running_automation
+[2023-12-03 15:59:51,366] {task_command.py:369} INFO - Running <TaskInstance: dag_automation_daily.running_automation manual__2023-12-03T15:54:33.850916+00:00 [running]> on host e3f0cae208be
+[2023-12-03 15:59:51,691] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sebastiancahyoardhiiswara@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_automation_daily
+AIRFLOW_CTX_TASK_ID=running_automation
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-03T15:54:33.850916+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-03T15:54:33.850916+00:00
+[2023-12-03 15:59:51,693] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-12-03 15:59:51,694] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python codes/automation.py']
+[2023-12-03 15:59:51,718] {subprocess.py:85} INFO - Output:
+[2023-12-03 15:59:56,684] {subprocess.py:92} INFO - Traceback (most recent call last):
+[2023-12-03 15:59:56,687] {subprocess.py:92} INFO -   File "codes/automation.py", line 10, in <module>
+[2023-12-03 15:59:56,688] {subprocess.py:92} INFO -     ) = generate_schema_dwh(credentials_db_postgres)
+[2023-12-03 15:59:56,688] {subprocess.py:92} INFO -   File "/opt/***/dags/codes/code.py", line 60, in generate_schema_dwh
+[2023-12-03 15:59:56,690] {subprocess.py:92} INFO -     engine = create_engine(credentials)
+[2023-12-03 15:59:56,691] {subprocess.py:92} INFO -   File "<string>", line 2, in create_engine
+[2023-12-03 15:59:56,691] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 298, in warned
+[2023-12-03 15:59:56,692] {subprocess.py:92} INFO -     return fn(*args, **kwargs)
+[2023-12-03 15:59:56,692] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 520, in create_engine
+[2023-12-03 15:59:56,693] {subprocess.py:92} INFO -     u, plugins, kwargs = u._instantiate_plugins(kwargs)
+[2023-12-03 15:59:56,694] {subprocess.py:92} INFO - AttributeError: 'NoneType' object has no attribute '_instantiate_plugins'
+[2023-12-03 15:59:57,893] {subprocess.py:96} INFO - Command exited with return code 1
+[2023-12-03 15:59:58,096] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-12-03 15:59:58,106] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=dag_automation_daily, task_id=running_automation, execution_date=20231203T155433, start_date=20231203T155951, end_date=20231203T155958
+[2023-12-03 15:59:58,240] {standard_task_runner.py:97} ERROR - Failed to execute job 7 for task running_automation (Bash command failed. The command returned a non-zero exit code 1.; 381)
+[2023-12-03 15:59:58,324] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-12-03 15:59:58,561] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
